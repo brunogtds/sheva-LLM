@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHEVA LLM - Intelligent Data Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .cta-button {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.4), 0 4px 6px -2px rgba(99, 102, 241, 0.2);
+        }
+        .modal-overlay {
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <div class="body-wrap">
+        <header class="absolute w-full z-30">
+            <div class="container mx-auto px-6 sm:px-8">
+                <div class="flex items-center justify-between h-20">
+                    <div class="shrink-0 mr-4">
+                        <a href="#" class="flex items-center text-gray-800">
+                            <svg class="w-8 h-8" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient x1="0%" y1="100%" y2="0%" id="logo-grad">
+                                        <stop stop-color="#6366F1" offset="0%"/>
+                                        <stop stop-color="#818CF8" offset="100%"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M16 0A16 16 0 000 16a16 16 0 0016 16c8.837 0 16-7.163 16-16A16 16 0 0016 0zm0 24.167a8.167 8.167 0 110-16.334 8.167 8.167 0 010 16.334z" fill="url(#logo-grad)"/>
+                            </svg>
+                            <span class="ml-3 text-2xl font-bold">SHEVA LLMs</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="relative pt-32 pb-0 lg:pt-40 lg:pb-20 overflow-hidden bg-gradient-to-br from-[#79adda] via-white to-white">
+
+                <div class="container mx-auto px-6 sm:px-8">
+                    <div class="flex flex-wrap lg:flex-nowrap items-center">
+                        <!-- Text Content -->
+                        <div class="w-full lg:w-1/2 text-center lg:text-left">
+                            <h1 class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight mb-6">
+                                Automated Hypothesis-Driven Discovery
+                            </h1>
+                            <p class="text-lg md:text-xl text-gray-600 max-w-xl mx-auto lg:mx-0 mb-8">
+                                Navigate the combinatorial explosion of your data. SHEVA 2.0 uses advanced algorithms to automatically discover statistically robust and interpretable insights, overcoming the limits of manual analysis.
+                            </p>
+                            <button id="start-analysis-btn" class="cta-button inline-block bg-indigo-500 text-white font-semibold rounded-lg px-8 py-4 text-lg shadow-lg">
+                                Start Analysis
+                            </button>
+                        </div>
+                        <!-- Image Content -->
+                        <div class="w-full lg:w-1/2 mt-12 lg:mt-0 flex justify-center lg:justify-end">
+                            <div class="relative">
+                                <img src="image2.png" alt="Data Analysis Illustration" width="896" height="618">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tutorial Section -->
+            <section id="tutorial" class="py-0 bg-white">
+                <div class="container mx-auto px-6 sm:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Get Actionable Insights in 4 Steps</h2>
+                        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">A quick guide to extracting maximum value from your data with our platform.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- Step 1 -->
+                        <div class="feature-card text-center">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 mx-auto mb-4">
+                                <i class="fas fa-upload text-2xl text-indigo-500"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">1. Upload Your Data</h3>
+                            <p class="text-gray-600">Start by uploading your dataset in .csv format. The platform will display a sample for validation.</p>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="feature-card text-center">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 mx-auto mb-4">
+                                <i class="fas fa-tasks text-2xl text-indigo-500"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">2. Prepare Your Analysis</h3>
+                            <p class="text-gray-600">Select your target variable, map binary columns to 0/1, and discretize numeric features to create categories.</p>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="feature-card text-center">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 mx-auto mb-4">
+                                <i class="fas fa-cogs text-2xl text-indigo-500"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">3. Choose Discovery Methods</h3>
+                            <p class="text-gray-600">Select one or more discovery algorithms, each with a different strategy for finding insights.</p>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="feature-card text-center">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 mx-auto mb-4">
+                                <i class="fas fa-chart-pie text-2xl text-indigo-500"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">4. Explore the Results</h3>
+                            <p class="text-gray-600">Analyze the generated hypotheses in tables and interactive visualizations like trees and sunburst charts.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LLM Integration Section -->
+            <section id="llm-integration" class="py-20 bg-gradient-to-b from-white to-[#79adda]">
+                <div class="container mx-auto px-6 sm:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Empowering AI with Deeper Insights</h2>
+                        <p class="text-gray-600 mt-4 max-w-3xl mx-auto">SHEVA 2.0 acts as a discovery engine to augment Large Language Models (LLMs), transforming them into powerful analytical partners.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="bg-white p-8 rounded-lg shadow-md">
+                            <h3 class="text-2xl font-semibold mb-4 text-red-500 flex items-center"><i class="fas fa-exclamation-circle mr-3"></i>The Challenge with LLMs</h3>
+                            <p class="text-gray-600">While LLMs excel at generating high-level summaries, they often lack the specialized capability to conduct a deep, multi-conditional, and statistically rigorous exploration of tabular data. On their own, they perform a competent but superficial analysis, missing the non-obvious patterns hidden within.</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-lg shadow-md">
+                            <h3 class="text-2xl font-semibold mb-4 text-green-500 flex items-center"><i class="fas fa-rocket mr-3"></i>The SHEVA 2.0 Solution</h3>
+                            <p class="text-gray-600">By providing a set of deep, statistically-vetted, and multi-conditional hypotheses, SHEVA 2.0 empowers LLMs to interpret and articulate complex patterns, interactions, and even sophisticated statistical concepts like variance, leading to richer and more reliable analytical narratives.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section id="features" class="py-20 bg-white">
+                <div class="container mx-auto px-6 sm:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Go Beyond Simple Correlations</h2>
+                        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">SHEVA 2.0 elevates data analysis from a descriptive task to a true engine for knowledge discovery.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="text-center p-6">
+                            <i class="fas fa-users text-4xl text-indigo-500 mb-4"></i>
+                            <h3 class="text-xl font-semibold mb-2">Discover Complex Subgroups</h3>
+                            <p class="text-gray-600">Automatically identify multi-conditional rules that define specific segments (e.g., customers, products) that deviate significantly from the average.</p>
+                        </div>
+                        <div class="text-center p-6">
+                            <i class="fas fa-chart-line text-4xl text-indigo-500 mb-4"></i>
+                            <h3 class="text-xl font-semibold mb-2">Analyze Outcome Variance</h3>
+                            <p class="text-gray-600">Uncover groups where outcomes are most inconsistent. Understand not just the average behavior, but also the stability and predictability of results.</p>
+                        </div>
+                        <div class="text-center p-6">
+                            <i class="fas fa-check-circle text-4xl text-indigo-500 mb-4"></i>
+                            <h3 class="text-xl font-semibold mb-2">Ensure Statistical Rigor</h3>
+                            <p class="text-gray-600">Every hypothesis is evaluated with robust metrics like q-value (FDR), Impact (Lift), and Coverage, ensuring your insights are statistically valid and meaningful.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-gray-800 text-white">
+            <div class="container mx-auto px-6 sm:px-8 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-center md:text-left mb-4 md:mb-0">
+                        <a href="#" class="flex items-center">
+                            <svg class="w-8 h-8" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient x1="0%" y1="100%" y2="0%" id="logo-footer-grad">
+                                        <stop stop-color="#A5B4FC" offset="0%"/>
+                                        <stop stop-color="#818CF8" offset="100%"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M16 0A16 16 0 000 16a16 16 0 0016 16c8.837 0 16-7.163 16-16A16 16 0 0016 0zm0 24.167a8.167 8.167 0 110-16.334 8.167 8.167 0 010 16.334z" fill="url(#logo-footer-grad)"/>
+                            </svg>
+                            <span class="ml-3 text-xl font-bold">SHEVA 2.0</span>
+                        </a>
+                    </div>
+                    <div class="text-center text-sm text-gray-400">
+                        &copy; 2024 SHEVA 2.0, all rights reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-lg shadow-xl p-8 max-w-sm w-full">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">Login</h2>
+                <button id="close-modal-btn" class="text-gray-500 hover:text-gray-800">&times;</button>
+            </div>
+            <form id="login-form">
+                <div class="mb-4">
+                    <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                    <input type="text" id="username" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" required>
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" id="password" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" required>
+                </div>
+                <p id="error-message" class="text-red-500 text-sm mb-4 hidden">Invalid username or password.</p>
+                <button type="submit" class="w-full cta-button bg-indigo-500 text-white font-semibold rounded-lg py-3">
+                    Enter
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const startAnalysisBtn = document.getElementById('start-analysis-btn');
+            const modal = document.getElementById('login-modal');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            const loginForm = document.getElementById('login-form');
+            const errorMessage = document.getElementById('error-message');
+
+            function showModal() {
+                modal.classList.remove('hidden');
+            }
+
+            function hideModal() {
+                modal.classList.add('hidden');
+                errorMessage.classList.add('hidden'); // Hide error on close
+            }
+
+            startAnalysisBtn.addEventListener('click', showModal);
+            closeModalBtn.addEventListener('click', hideModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    hideModal();
+                }
+            });
+
+            loginForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                errorMessage.classList.add('hidden'); // Hide previous errors
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+
+                // Send credentials to the backend
+                fetch('http://localhost:8000/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ username: username, password: password }),
+                })
+                .then(response => {
+                    if (response.ok) {
+                        window.location.href = 'sheva.html';
+                    } else {
+                        errorMessage.classList.remove('hidden');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error during login:', error);
+                    errorMessage.textContent = 'Could not connect to the server.';
+                    errorMessage.classList.remove('hidden');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
