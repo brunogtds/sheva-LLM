@@ -1,0 +1,4 @@
+Suggested next round
+1. Test interaction effects: evaluate whether the effect of sex on body mass differs by species (e.g., Gentoo male vs female, Adelie male vs female, Chinstrap male vs female). This would directly test whether sex is a universal effect or species-specific.
+
+2. Model body mass with multivariate predictors: fit a regression or decision tree using species, island, sex, bill_length_mm_Class, bill_depth_mm_Class, and flipper_length_mm_Class to identify which variables independently predict body mass and whether bill/flipper measurements add explanatory power beyond species and sex.

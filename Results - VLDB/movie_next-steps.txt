@@ -1,0 +1,4 @@
+Suggested next round
+1. Test whether Comedy ratings differ by age group within each gender, for example: genre = Comedy AND gender = F AND age band = 18–24 / 25–34 / 35–44. This could reveal whether age effects are stronger for one gender.
+
+2. Test a more detailed interaction model for Comedy preferences by occupation and location, such as genre = Comedy AND occupation in {student, artist, retired} AND state region group (e.g., West, Northeast, Midwest, South), to see whether cultural or regional context changes how Comedy is rated.
